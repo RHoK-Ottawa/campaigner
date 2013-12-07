@@ -1,2 +1,2 @@
-module SignatoriesindexHelper
+module SignatoriesHelper
 end

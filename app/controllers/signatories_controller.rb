@@ -1,5 +1,8 @@
 class SignatoriesController < ApplicationController
 
+  respond_to :html
+  respond_to :json #:except => [ ... ]
+
   def new
   end
 
@@ -7,16 +10,30 @@ class SignatoriesController < ApplicationController
     @campaign = Campaign.find(params[:campaign_id])
     @signatory = @campaign.signatories.create(params[:signatory])
     @signatory.save
-    redirect_to :action => "show", :id => @signatory.id
+    redirect_to :action => "success", :id => @signatory.id
   end
 
   def index
     @signatories = Signatory.find(:all)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @signatories }
+    end
+  end
+
+  def success
+    @campaign = Campaign.find(params[:campaign_id])
+    @signatory = Signatory.find(params[:id])
   end
 
   def show
-    @campaign = Campaign.find(params[:campaign_id])
     @signatory = Signatory.find(params[:id])
+
+    respond_to do |format|
+      formate.html
+      format.json { render json: @signatory }
+    end
   end
 
 end
