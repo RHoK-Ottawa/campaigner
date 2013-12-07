@@ -6,28 +6,22 @@ class CampaignsController < ApplicationController
   def new
   end
 
-  def creates
+  def create
     @campaign = Campaign.create(params[:campaign])
     @campaign.save
-    redirect_to @campaign
+
+    respond_to do |format|
+      format.html { redirect_to @campaign }
+      format.json { render :json => @campaign }
+    end
   end
 
   def index
-    @campaigns = Campaign.find(:all)
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @campaigns }
-    end
+    respond_with(@campaigns = Campaign.find(params[:all]))
   end
 
-  def show
-    @campaign = Campaign.find(params[:id])
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @campaign }
-    end
+  def show 
+    respond_with(@campaign = Campaign.find(params[:id]))
   end
 
 end
