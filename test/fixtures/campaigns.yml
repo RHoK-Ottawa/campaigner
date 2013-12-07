@@ -1,9 +1,3 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  title: MyString
-  petition_text: MyString
-
-two:
-  title: MyString
-  petition_text: MyString
+epic_petition:
+  title: "Epic Petition"
+  petition_text: "This petition is epic."
