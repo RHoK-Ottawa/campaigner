@@ -1,0 +1,20 @@
+<%= form_for :campaign, url: campaigns_path do |f| %>
+  <p>
+    <%= f.label :title, 'Title' %>
+  </p>
+  
+  <p>
+    <%= f.text_field :title %>
+  </p>
+  
+  <p>
+    <%= f.label :petition_text, 'Petition Text' %>
+  </p>
+
+  <p>
+    <%= f.text_area :petition_text %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %> 

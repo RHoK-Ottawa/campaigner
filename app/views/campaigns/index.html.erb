@@ -1,0 +1,7 @@
+<table>
+<% @campaigns.each do |campaign| %>
+  <tr>
+  <%= link_to campaign.title, campaign %>
+  </tr>
+<% end %>
+</table>
