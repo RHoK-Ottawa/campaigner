@@ -1,0 +1,8 @@
+<table>
+<% @signatories.each do |signatory| %>
+  <tr>
+    <td><%= signatory.name %></td>
+    <td><%= signatory.email %></td>
+  </tr>
+<% end %>
+</table>

@@ -3,4 +3,6 @@ class Campaign < ActiveRecord::Base
   
   validates :title, presence: true
   validates :petition_text, presence: true
+
+  has_many :signatories
 end

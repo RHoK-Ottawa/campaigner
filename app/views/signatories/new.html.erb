@@ -1,0 +1,20 @@
+<%= form_for :signatory, url: campaign_signatories_path do |f| %>
+  <p>
+    <%= f.label :name, 'Name' %>
+  </p>
+  
+  <p>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label :email, 'Email Address' %>
+  </p>
+
+  <p>
+    <%= f.email_field :email %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %> 
