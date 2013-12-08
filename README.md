@@ -9,15 +9,13 @@ An app to facilitate running petition campaigns, with a Rails backend serving JS
 
 ### Backend 
 
-#### */db* 
+#### */db/* 
 
 This project uses a normal Ruby on Rails backend to manage data.
 
 ### Front-end
 
-#### */design* for responsive websites
-
-#### */?* for native apps
+#### */public/design/* for responsive websites
 
 ## How to get started developing
 
