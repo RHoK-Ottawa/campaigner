@@ -69,20 +69,11 @@ Rails Models
 
 4. Recipient input
 
-  * 
-
-The back-end outputs a JSON feed. 
+  Generally speaking, the recipient of a petition will not react with input to the app directly.
 
 Front-Ends
 ========================
 
-The front-end use the JSON feeds.
+Initial user interface designs focus on responsive HTML5 web pages.
 
-
-HTML5
-svg.js
-
-Native
-------------------------
-
-Phonegap
+The Android client app is built using `Phonegap <http://phonegap.com>`_.

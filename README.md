@@ -5,7 +5,7 @@ Campaigner
 
 An app to facilitate running petition campaigns with a decoupled  back-end serving HTML5 and native apps.
 
-Petition creation and data storage is handled by a Ruby on Rails back end. Rails serves petitions as JSON to public-facing front-ends, and accepts a JSON stream of signatures. 
+Petition creation and data storage is handled by a Ruby on Rails back end. Rails serves petitions as JSON to public-facing front-ends, and accepts a JSON stream of signatures and other data. 
 
 ## Directory structure
 
@@ -31,12 +31,13 @@ If you're on a Mac and you'd rather configure things yourself, you'll need XCode
 
 If you're on Windows PC, use the Rails installer and enjoy the hours (days!) of pain you have just avoided. Α Windows development environment is not recommended for Rails projects, however.
 
-## Code promotion
+### Code promotion
 
 Create a fork of this repository and make the project your own! Have a feature you'd like to contribute? Send a pull request.
 
-## Where to find more information
+### Where to find more information
 
 * [Docs](/docs) provides documentation for extending development, installing and operating the app, and manipulating the API.
+* [Roadmap](/docs/roadmap.md) sets a direction for this project
 * Amnesty International Canada's [Digital Communications Manual](http://amnesty-international-digital-publishing-manual.readthedocs.org/en/latest/) provides context for the creation of this project and background on doing petitioning and advocacy work online.
-* Amnesty International Canada's [Best Practices](https://github.com/AmnestyInternational/bestpractices) document sets guidelines for coding and development projects
+* Amnesty International Canada's [Best Practices](https://github.com/AmnestyInternational/bestpractices) document is a guideline for coding and developing digital projects
