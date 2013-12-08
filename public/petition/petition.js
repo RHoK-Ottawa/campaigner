@@ -6,17 +6,14 @@ function filePetition(){
         console.log( 'signatory: ' + signatory.value );
         console.log( 'emailaddress: ' + emailaddress.value );
 
-        var signature = { "email": signatory.value, "name": signatoryName };
-
         var xhr = new XMLHttpRequest();
 
-        xhr.open('POST', 'somewhere', true);
-
-        xhr.open('POST', 'http://localhost:3000/campaigns/1/signatories.json', true);
-
+        xhr.open('POST', 'http://localhost:3000/campaigns/4/signatories.json', true);
+        xhr.setRequestHeader('Content-type', 'application/json')
         xhr.onload = function () {
             console.log('onload');
         };
 
-        xhr.send( signature );
+        var signature = { email: signatory.value, name: signatoryName.value };
+        xhr.send( JSON.stringify(signature) );
 }
