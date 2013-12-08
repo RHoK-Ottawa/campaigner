@@ -32,7 +32,8 @@ class SignatoriesController < ApplicationController
 
   def index
     @campaign = Campaign.find(params[:campaign_id])
-    respond_with(@signatories = @campaign.signatories.find(:all))
+    per_page = 50
+    respond_with(@signatories = @campaign.signatories.paginate(:page => params[:page], :per_page => per_page))
   end
 
   def show

@@ -24,7 +24,8 @@ class CampaignsController < ApplicationController
   end
 
   def index
-    respond_with(@campaigns = Campaign.find(:all))
+    per_page = 20
+    respond_with(@campaigns = Campaign.paginate(:page => params[:page], :per_page => per_page))
   end
 
   def show 

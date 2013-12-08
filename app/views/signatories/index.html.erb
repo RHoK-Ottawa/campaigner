@@ -11,6 +11,8 @@
 <% end %>
 </table>
 
+<%= will_paginate @signatories %>
+
 <p>
   <%= link_to "Sign Now!", controller: "signatories", action: "new", campaign_id: @campaign.id %>
 </p>
