@@ -39,4 +39,10 @@ class SignatoriesController < ApplicationController
     respond_with(@signatory = Signatory.find(params[:id]))
   end
 
+  def destroy
+    @signatory = Signatory.find(params[:id])
+    @signatory.destroy
+    redirect_to campaign_signatories_path
+  end
+
 end
