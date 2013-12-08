@@ -1,4 +1,3 @@
-
 About This Project
 =====================================
 
@@ -17,7 +16,7 @@ Humans who worked on the initial draft of this project:
 * `Kevin Hughes <https://github.com/pickle27>` built the back end
 * `Jackson Couse <https://github.com/jacksoncouse>` is the project maintainer
 * `Ismail Syed <https://github.com/isyed867>` helped with the back end
-* `George Irish <https://github.com/georgeirish>` wass the representative from Amnesty International Canada
+* `George Irish <https://github.com/georgeirish>` was the representative from Amnesty International Canada
 
 README
 ----------------------
