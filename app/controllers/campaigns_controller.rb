@@ -17,7 +17,7 @@ class CampaignsController < ApplicationController
   end
 
   def index
-    respond_with(@campaigns = Campaign.find(params[:all]))
+    respond_with(@campaigns = Campaign.find(:all))
   end
 
   def show 
