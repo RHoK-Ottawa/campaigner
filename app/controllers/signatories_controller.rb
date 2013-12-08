@@ -23,7 +23,8 @@ class SignatoriesController < ApplicationController
   end
 
   def index
-    respond_with(@signatories = Signatory.find(:all))
+    @campaign = Campaign.find(params[:campaign_id])
+    respond_with(@signatories = @campaign.signatories.find(:all))
   end
 
   def show
