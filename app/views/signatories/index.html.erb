@@ -1,3 +1,7 @@
+<h1><%= link_to @campaign.title, @campaign %></h1>
+
+<p> <strong>Signatures:</strong> </p>
+
 <table>
 <% @signatories.each do |signatory| %>
   <tr>
@@ -6,3 +10,7 @@
   </tr>
 <% end %>
 </table>
+
+<p>
+  <%= link_to "Sign Now!", controller: "signatories", action: "new", campaign_id: @campaign.id %>
+</p>
