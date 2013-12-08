@@ -1,19 +1,23 @@
-<%= form_for :signatory, url: campaign_signatories_path do |f| %>
-  <p>
-    <%= f.label :name, 'Name' %>
-  </p>
-  
-  <p>
-    <%= f.text_field :name %>
-  </p>
-  
-  <p>
-    <%= f.label :email, 'Email Address' %>
-  </p>
+<h1> Signing <%= @campaign.title%> </h1>
 
-  <p>
-    <%= f.email_field :email %>
-  </p>
+<%= form_for :signatory, url: campaign_signatories_path do |f| %>
+  
+  <% if @signatory.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@signatory.errors.count, "error") %> prohibited
+      this signature from being saved:</h2>
+    <ul>
+    <% @signatory.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p> <%= f.label :name, 'Name' %> </p> 
+  <p> <%= f.text_field :name %> </p>
+  <p> <%= f.label :email, 'Email Address' %> </p>
+  <p> <%= f.email_field :email %> </p>
 
   <%= f.submit %>
 

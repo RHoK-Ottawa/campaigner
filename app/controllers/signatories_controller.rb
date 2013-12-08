@@ -4,16 +4,24 @@ class SignatoriesController < ApplicationController
   respond_to :json #:except => [ ... ]
 
   def new
+    @campaign = Campaign.find(params[:campaign_id])
+    @signatory = Signatory.new
   end
 
   def create
     @campaign = Campaign.find(params[:campaign_id])
     @signatory = @campaign.signatories.create(params[:signatory])
-    @signatory.save
     
-    respond_to do |format|
-      format.html { redirect_to :action => "success", :id => @signatory.id }
-      format.json { render :json => @signatory }
+    if @signatory.save
+      respond_to do |format|
+        format.html { redirect_to :action => "success", :id => @signatory.id }
+        format.json { render :json => @signatory }
+      end
+    else
+      respond_to do |format|
+        format.html { render 'new' }
+        format.json { render :json => @signatory.to_json, :status => :unprocessable_entity }
+      end
     end
   end
 

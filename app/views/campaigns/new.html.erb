@@ -1,20 +1,24 @@
-<%= form_for :campaign, url: campaigns_path do |f| %>
-  <p>
-    <%= f.label :title, 'Title' %>
-  </p>
-  
-  <p>
-    <%= f.text_field :title %>
-  </p>
-  
-  <p>
-    <%= f.label :petition_text, 'Petition Text' %>
-  </p>
+<h1> New Campaign </h1>
 
-  <p>
-    <%= f.text_area :petition_text %>
-  </p>
+<%= form_for :campaign, url: campaigns_path do |f| %>
+  
+  <% if @campaign.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@campaign.errors.count, "error") %> prohibited
+      this campaign from being saved:</h2>
+    <ul>
+    <% @campaign.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p> <%= f.label :title, 'Title' %> </p>
+  <p> <%= f.text_field :title %> </p>
+  <p> <%= f.label :petition_text, 'Petition Text' %> </p>
+  <p> <%= f.text_area :petition_text %> </p>
 
   <%= f.submit %>
 
-<% end %> 
+<% end %>

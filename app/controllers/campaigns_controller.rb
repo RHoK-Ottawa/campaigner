@@ -4,15 +4,22 @@ class CampaignsController < ApplicationController
   respond_to :json #:except => [ ... ]
 
   def new
+    @campaign = Campaign.new
   end
 
   def create
     @campaign = Campaign.create(params[:campaign])
-    @campaign.save
-
-    respond_to do |format|
-      format.html { redirect_to @campaign }
-      format.json { render :json => @campaign }
+    
+    if @campaign.save
+      respond_to do |format|
+        format.html { redirect_to @campaign }
+        format.json { render :json => @campaign }
+      end
+    else
+      respond_to do |format|
+        format.html { render 'new' }
+        format.json { render :json => @campaign.to_json, :status => :unprocessable_entity }
+      end
     end
   end
 
