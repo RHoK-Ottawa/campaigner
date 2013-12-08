@@ -5,10 +5,16 @@
 	<script	src="petition.js"></script>
 </head>
 <body class="background">
-	<div>
+	<div id="notificationArea" class="notificationHide"></div>
+	<div id="banner" class="banner">
 		<img src="./images/amnesty-header-retina.png" alt="Amnesty International" width="320" height="118">
 	</div>
 	<div class="summary">
+		<img class="Media-figure Image" src="./images/noose.png" height="40px" width="40px" alt="Noose">
+      <div class="Media-body">
+        <h3 class="petitionSubject">HAMID GHASSEMI-SHALL</h3>
+        <p class="campaignType">DEATH PENALTY</p>
+      </div>
 	</div>
 	<div class="fields">
 	<form class="form">
@@ -16,7 +22,9 @@
 		<span class="entry"><span class="label">EMAIL:</span><input class="inputfield" id="emailaddress" type="type="email"" name="email"></span>
 	</form>
 	</div>
-	<button name="" class="submission" onclick="filePetition()">SEND PETITION</button>
+	<div class="submissionArea">
+		<button name="" class="submission" onclick="showFeedback()">SEND PETITION</button>
+	</div>
 	<div class="multimedia">
 	</div>
 </body>
