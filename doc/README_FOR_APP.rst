@@ -11,12 +11,12 @@ Humans
 
 Humans who worked on the initial draft of this project: 
 
-* `Anton McConville <https://github.com/antonmc>` built the front end
-* `Ayman Hindman <https://github.com/ahindam>` did device-specific "appification" with phonegap
-* `Kevin Hughes <https://github.com/pickle27>` built the back end
-* `Jackson Couse <https://github.com/jacksoncouse>` is the project maintainer
-* `Ismail Syed <https://github.com/isyed867>` helped with the back end
-* `George Irish <https://github.com/georgeirish>` was the representative from Amnesty International Canada
+* `Anton McConville <https://github.com/antonmc>`_ built the front end
+* `Ayman Hindman <https://github.com/ahindam>`_ did device-specific "appification" with phonegap
+* `Kevin Hughes <https://github.com/pickle27>`_ built the back end
+* `Jackson Couse <https://github.com/jacksoncouse>`_ is the project maintainer
+* `Ismail Syed <https://github.com/isyed867>`_ helped with the back end
+* `George Irish <https://github.com/georgeirish>`_ was the representative from Amnesty International Canada
 
 README
 ----------------------
