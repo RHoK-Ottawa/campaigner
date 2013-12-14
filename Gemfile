@@ -35,6 +35,6 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'debugger'
+gem 'byebug'
 
 gem 'will_paginate'
